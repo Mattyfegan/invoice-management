@@ -1,0 +1,33 @@
+#root {
+  width: 100vw;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.navigation{
+  width: 95%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  padding-top: 2px;
+}
+
+.body{
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#heading{
+  text-align: center;
+  font-size: 75px;
+  animation: floating 3s ease-in-out infinite
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }   
+}
