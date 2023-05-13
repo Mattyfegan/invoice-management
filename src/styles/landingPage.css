@@ -1,0 +1,25 @@
+.navigation{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    padding-top: 2px;
+    /* background-color: var(--accentBrown) */
+  }
+  
+  .body{
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: flex;
+  }
+  
+  .colouredText{
+    color: var(--accentMint);
+  }
+  
+  #heading{
+    text-align: center;
+    font-size: 75px;
+  }

@@ -4,23 +4,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
+    margin: auto;
 }
 
 .card {
     height: 85%;
     width: 30%;
-    border: 3px solid rgba(180, 167, 214, 1);
-    background-color: #333;
+    border: 3px solid var(--accentMint);
+    box-shadow: 5px 5px 14px rgba(0,0,0,0.8);
+    background-color: rgba(55, 50, 47, 0.95);
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     position: relative;
-    transition: top ease 2s;
+    transform: translate 3s
 }
 
 .card:hover{
-    top: -15px;
+    transform: translate(0px, -15px);
+    box-shadow: 7px 10px 10px rgba(0,0,0,0.8); 
 }
 
 .cardImg{
@@ -58,7 +62,7 @@
 
 .cardButton{
     padding: 9px 25px;
-    background-color: rgba(180, 167, 214, 0.8);
+    background-color: var(--mainColour);
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -67,5 +71,6 @@
 }
 
 .cardButton:hover{
-    background-color: rgba(180, 167, 214, 0.5)
+    background-color: var(--mainColourHover);
+    color: var(--accentMint)
 }
