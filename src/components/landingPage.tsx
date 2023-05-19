@@ -1,6 +1,7 @@
 import NavBar from "./nav"
 import Particlez from "./particles"
 import LandingCards from "./landingCards"
+
 import '../styles/landingPage.css'
 
 function LandingPage(){

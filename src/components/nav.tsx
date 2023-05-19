@@ -1,5 +1,5 @@
 import "../styles/nav.css"
-import logo from "../assets/logo.png"
+import logo from "../assets/imsLogo.svg"
 import "../App.css"
 
 export default function NavBar(){
