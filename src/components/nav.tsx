@@ -1,8 +1,11 @@
 import "../styles/nav.css"
 import logo from "../assets/imsLogo.svg"
+import Modal from "./login";
+import useModal from "../hooks/useModal";
 import "../App.css"
 
 export default function NavBar(){
+    const { isOpen, toggle } = useModal();
     return(
         <header>
             <a href="#"><img src={logo} alt="logo"/></a>
@@ -14,7 +17,8 @@ export default function NavBar(){
                     <li><a href="#">Help</a></li>
                 </ul>
             </nav>
-            <a href="#"><button>Login/Register</button></a>
+            <button className="loginButton" onClick={toggle}>Login/Register</button>
+            <Modal isOpen={isOpen} toggle={toggle}></Modal>
         </header>
     )
 }

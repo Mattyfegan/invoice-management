@@ -1,21 +1,86 @@
 .modal-overlay {
     z-index: 9999;
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
     position: absolute;
     top: 0;
-    background: rgba(0, 0, 0, 0.7);
+    left: 0;
+    background: rgba(62, 61, 61, 0.7);
+    backdrop-filter: blur(5px);
+    margin: auto;
+    padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-  }
+}
   
-  .modal-box {
+.modal-box {
     display: block;
-    background: white;
-    width: 70%;
-    height: 70%;
-    padding: 1rem;
-    border-radius: 1rem;
-  }
-  
+    background-color: rgba(55, 50, 47, 1);
+    border: 2px solid var(--accentMint);
+    box-shadow: 7px 10px 10px rgb(4, 4, 4); 
+    width: 30%;
+    height: 40%;
+    border-radius: 10px;
+    position: absolute;
+    margin: 100px 30%
+}
+
+.tabs{
+    border-bottom: 2px solid var(--accentMint);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 10%;
+    overflow: hidden;
+    margin-top: -2px;
+}
+
+.tabLinks{
+    height: 100%;
+    width: 30%;
+    border-radius: 0%;
+    background-color: inherit;
+    margin-right: 2px;
+    padding: 0;
+    margin-top: -2px;
+    border-top: 2px solid var(--accentMint)
+}
+
+#left{
+    border-top-left-radius: 10px;
+    margin: -2px 0px 0px -2px;
+    border-left: 2px solid var(--accentMint)
+}
+
+.tabLinks:hover{
+    border: 2px solid var(--accentMint);
+    border-bottom: none;
+    background-color: rgb(62, 56, 54);
+    color: var(--mainColour)
+}
+
+.xButton{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 15px
+}
+
+.x{
+    width: 15%;
+    height: 100%;
+    background-color: inherit;
+    border:none;
+    margin-top: -2px;
+}
+
+.x:hover{
+    border: none
+}
+
+.close{
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    color: var(--mainColour);
+}
