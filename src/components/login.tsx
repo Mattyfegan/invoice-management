@@ -1,5 +1,5 @@
 import "../styles/login.css";
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useState, useEffect } from "react";
 
 interface ModalType {
   children?: ReactNode;
@@ -8,38 +8,50 @@ interface ModalType {
 }
 
 export default function Modal(props: ModalType) {
-  const [activeTab, setActiveTab] = useState("signIn");
+  useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && props.isOpen) {
+        props.toggle();
+      }
+    };
 
-  const handleTabClick = (tab: string) => {
-    setActiveTab(tab);
-  };
+    document.addEventListener("keydown", handleKeyPress);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+  }, [props.isOpen, props.toggle]);
 
   return (
     <>
       {props.isOpen && (
-        <div className="modal-overlay" onClick={props.toggle}>
-          <div onClick={(e) => e.stopPropagation()} className="modal-box">
+        <div className="modalOverlay" onClick={props.toggle}>
+          <div onClick={(e) => e.stopPropagation()} className="modalBox">
             {props.children}
             <div className="tabs">
-              <button className={`tabLinks ${activeTab === "signIn" ? "active" : ""}`} onClick={() => handleTabClick("signIn")} id="left"> Sign-in </button>
-              <button className={`tabLinks ${activeTab === "register" ? "active" : ""}`} onClick={() => handleTabClick("register")} > Register </button>
+              <h2>Sign-In</h2>
               <div className="xButton">
                 <button className="x" onClick={props.toggle}>
                   <span className="close">&times;</span>
                 </button>
               </div>
             </div>
-            <div className="tab-content">
-              {activeTab === "signIn" && 
-                <div className="signInContent">
-                  Content for Tab 1                  
-                </div>
-              }
-              {activeTab === "register" && 
-                <div className="registerContent">
-                  Content for Tab 2
-                </div>
-              }
+            <div className="tabContent">
+              <div className="loginForm">
+                <form className="login">
+                  <label htmlFor="uName" className="loginLabel">Username</label><br />
+                  <input type="text" id="uName" name="uName"/><br />
+                  <label htmlFor="pass" className="loginLabel">Password</label><br />
+                  <input type="password" id="pass" name="pass"/>
+                  <input type="submit" value="Sign-In" className="signInButton"/>
+                </form>
+                <a href="#" className="registerLink">Not a member? Register here.</a>
+              </div>
+              <div className="googleContent">
+                <h2>Or</h2>
+                <button className="googleSignIn">Sign-In With Google</button>
+              </div>
+              
             </div>
           </div>
         </div>

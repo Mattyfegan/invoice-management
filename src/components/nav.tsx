@@ -17,7 +17,7 @@ export default function NavBar(){
                     <li><a href="#">Help</a></li>
                 </ul>
             </nav>
-            <button className="loginButton" onClick={toggle}>Login/Register</button>
+            <button className="loginButton" onClick={toggle}>Sign-In</button>
             <Modal isOpen={isOpen} toggle={toggle}></Modal>
         </header>
     )
