@@ -39,8 +39,8 @@ export default function Modal(props: ModalType) {
             <div className="tabContent">
               <div className="loginForm">
                 <form className="login">
-                  <label htmlFor="uName" className="loginLabel">Username</label><br />
-                  <input type="text" id="uName" name="uName"/><br />
+                  <label htmlFor="eMail" className="loginLabel">Email</label><br />
+                  <input type="email" id="eMail" name="eMail"/><br />
                   <label htmlFor="pass" className="loginLabel">Password</label><br />
                   <input type="password" id="pass" name="pass"/>
                   <input type="submit" value="Sign-In" className="signInButton"/>

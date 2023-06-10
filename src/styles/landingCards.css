@@ -13,7 +13,7 @@
     width: 30%;
     border: 3px solid var(--accentMint);
     box-shadow: 5px 5px 14px rgba(0,0,0,0.8);
-    background-color: rgba(55, 50, 47, 0.95);
+    background-color: var(--accentDarkerBrown);
     border-radius: 10px;
     display: flex;
     justify-content: space-between;

@@ -2,7 +2,8 @@
   --mainColour: #9389AE;
   --accentMint: #C1EDCC;
   --accentBrown: #453F3C;
-  --mainColourHover: #9389AE88
+  --mainColourHover: #9389AE88;
+  --accentDarkerBrown: rgba(55, 50, 47, 0.95);
 }
 
 #root {
@@ -11,5 +12,12 @@
   text-align: center;
 }
 
+.navigation{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  padding-top: 2px;
+}
 
 

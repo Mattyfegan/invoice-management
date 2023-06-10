@@ -15,7 +15,7 @@
   
 .modalBox {
     display: block;
-    background-color: rgba(55, 50, 47, 1);
+    background-color: var(--accentDarkerBrown);
     border: 2px solid var(--accentMint);
     box-shadow: 7px 10px 10px rgb(4, 4, 4); 
     width: 25%;
@@ -75,14 +75,13 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /* border: 1px dashed greenyellow */
+    margin-top: 10px;
 }
 
 .loginForm{
     margin-top: 10px;
     width: 80%;
     height: 55%;
-    /* border: 1px dashed purple */
 }
 
 .login label{
@@ -93,7 +92,8 @@
 .login input{
     width: 95%;
     border-radius: 50px;
-    padding: 2px
+    padding: 2px;
+    outline: none;
 }
 
 .login .signInButton{
@@ -125,7 +125,6 @@
 
 .googleContent{
     height: 35%;
-    /* border: 1px dashed pink; */
 }
 
 .googleContent h2{
