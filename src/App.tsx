@@ -1,12 +1,13 @@
 import LandingPage from "./components/landingPage"
-import RegisterPage from "./components/registerPage"
+import NavBar from "./components/nav"
+// import RegisterPage from "./components/registerPage"
 import './App.css'
 
 function App() {
   return (
     <>
-      {/* <LandingPage/> */}
-      <RegisterPage/>
+      <NavBar />
+      <LandingPage/>
     </>
   )
 }

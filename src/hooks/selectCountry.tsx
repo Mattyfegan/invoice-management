@@ -1,5 +1,6 @@
 import React from 'react';
-import Select, { ValueType } from 'react-select';
+import Select from 'react-select';
+import ValueType from "react-select";
 import { StylesConfig } from 'react-select';
 
 interface CountryOption {
@@ -250,7 +251,7 @@ const countryOptions = [
 ];
 
 const customStyles: StylesConfig = {
-    control: (provided, state) => ({
+    control: (provided) => ({
       ...provided,
       border: '2px solid #9389AE',
       borderRadius: '50px',
@@ -262,15 +263,15 @@ const customStyles: StylesConfig = {
       fontSize: '15px',
       color: 'white'
     }),
-    singleValue: (provided, state) => ({
+    singleValue: (provided) => ({
         ...provided,
         color: 'white',
     }),
-    placeholder: (provided, state) => ({
+    placeholder: (provided) => ({
         ...provided,
         color: 'white',
     }),
-    input: (provided, state) => ({
+    input: (provided) => ({
         ...provided,
         color: 'white',
     }),

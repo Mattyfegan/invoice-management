@@ -74,14 +74,19 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: start;
     flex-wrap: wrap;
     margin-top: 10px;
+    /* border: 1px solid greenyellow */
 }
 
 .loginForm{
-    margin-top: 10px;
     width: 80%;
-    height: 55%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* border: 1px solid orangered */
 }
 
 .login label{
@@ -124,7 +129,9 @@
 }
 
 .googleContent{
-    height: 35%;
+    height: 30%;
+    display: inline-block;
+    /* border: 1px dotted magenta */
 }
 
 .googleContent h2{

@@ -45,13 +45,12 @@ export default function Modal(props: ModalType) {
                   <input type="password" id="pass" name="pass"/>
                   <input type="submit" value="Sign-In" className="signInButton"/>
                 </form>
-                <a href="#" className="registerLink">Not a member? Register here.</a>
+                <a href="/register" className="registerLink">Not a member? Register here.</a>
               </div>
               <div className="googleContent">
                 <h2>Or</h2>
                 <button className="googleSignIn">Sign-In With Google</button>
               </div>
-              
             </div>
           </div>
         </div>

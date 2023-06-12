@@ -1,0 +1,50 @@
+.dashBody{
+    background-color: var(--accentBrown)
+}
+
+.dashContainer{
+    height: 90%;
+    width: 100vw;
+    position: absolute;
+    bottom:0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.leftContainer{
+    height: 100%;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px dashed dodgerblue
+}
+
+.topSection{
+    height: 20%;
+    width: 95%;
+    border: 1px solid orange
+}
+
+.insightsContainer{
+    height: 70%;
+    width: 95%;
+    border: 1px solid olive
+}
+
+.rightContainer{
+    height: 100%;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed red
+}
+
+.invoiceContainer{
+    width: 95%;
+    height: 95%;
+    border: 1px solid yellow
+}
