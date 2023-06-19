@@ -49,14 +49,14 @@ input{
 }
 
 .signUpButton{
-    width: 40%;
-    padding: 6px 20px;
+    width: 30%;
+    padding: 5px 15px;
     background-color: var(--mainColour);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    font-size: 25px;
+    font-size: 20px;
 }
   
 .signUpButton:hover{

@@ -3,7 +3,6 @@ import CountryDropdown from "../hooks/selectCountry"
 import setSelectedCountry from "../hooks/selectCountry"
 import selectedCountry from "../hooks/selectCountry"
 import { CountryOption } from "../hooks/selectCountry"
-import Select from "react-select"
 
 function RegisterPage(){
   return (
