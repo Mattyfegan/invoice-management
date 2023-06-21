@@ -14,7 +14,7 @@ export default function NavBar(){
                     
                 </div>
                 <div className="buttonBox">
-                <a href="#"><button className="cardButton">Go to Dashboard</button></a>
+                <a href="/dashboard"><button className="cardButton">Go to Dashboard</button></a>
                 </div>
                 
             </div>
