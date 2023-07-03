@@ -10,7 +10,7 @@ class Graph extends Component {
 			backgroundColor: "#37322F",
 			animationEnabled: true,
 			exportEnabled: true,
-			theme: "dark2", // "light1", "light2", "dark2"
+			theme: "dark2",
 			title:{
                 fontFamily:'verdana',
 				text: "Profits by Week of Year"

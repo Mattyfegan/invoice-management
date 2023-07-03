@@ -14,7 +14,7 @@ export default function NavBar(){
                     <ul className="navLinks">
                         <li><a href="/dashboard">Dashboard</a></li>
                         <li><a href="#">Insights</a></li>
-                        <li><a href="#">Invoices</a></li>
+                        <li><a href="/invoice">Invoices</a></li>
                         <li><a href="#">Help</a></li>
                     </ul>
                 </nav>

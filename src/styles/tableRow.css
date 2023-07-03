@@ -1,0 +1,7 @@
+.invoiceState{
+    width: 30px;
+    /* display: inline-block;  */
+    padding: 5px;
+    border-radius: 100px;
+    color: var(--mainColor)  
+}

@@ -1,3 +1,4 @@
+
 .dashContainer{
     height: 90%;
     width: 100vw;
@@ -17,11 +18,6 @@
     align-items: flex-start;
     flex-wrap: wrap;
 }
-
-/* .topSection{
-    height: 15%;
-    width: 95%;
-} */
 
 .insightsContainer{
     height: 98%;
@@ -47,6 +43,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 2px
 }
 
 .insightSection{
@@ -81,6 +78,7 @@
     box-shadow: 5px 5px 14px rgba(0,0,0,0.8);
     background-color: var(--accentDarkerBrown);
     border-radius: 10px;
+    overflow: scroll  
 }
 
 .invoiceContainer hr {

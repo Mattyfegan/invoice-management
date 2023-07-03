@@ -1,0 +1,35 @@
+.invoiceTable{
+    width: 100%;
+    height: 88%;      
+    /* border: 1px solid red */
+}
+
+th{
+    /* border: 1px dashed green; */
+    height: 10%;
+}
+
+.date{
+    width: 10%;
+}
+
+.details{
+    width: 80%
+}
+
+.paid{
+    width: 10%;
+}
+
+table, th, td{
+    border: 1px solid var(--accentBrown)
+}
+
+/* td button{
+    width: 30%;
+    margin: auto
+} */
+
+th, td{
+    max-height: 10%
+}

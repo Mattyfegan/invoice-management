@@ -6,6 +6,7 @@ import './index.css'
 
 import RegisterPage from './components/registerPage.tsx'
 import Dashboard from './components/dashboard.tsx'
+import Invoice from './components/invoice.tsx'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard />
+  },
+  {
+    path: "/invoice",
+    element: <Invoice />
   }
 ])
 
