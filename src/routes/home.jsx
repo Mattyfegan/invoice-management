@@ -2,6 +2,8 @@ import { NavLink, useFetcher, useOutletContext } from 'react-router-dom';
 
 import { auth } from '../firebase/firebaseConfig.jsx';
 import testSubmit from '../firebase/testSubmit.jsx';
+
+import Navbar from './navbar.jsx';
 import './home.css';
 
 export default function Home() {
@@ -13,15 +15,18 @@ export default function Home() {
     };
 
     return(
-        <div className='panel'>
-            <h1>Invoicing made easy!</h1>
-            { user.user ? <div><TestSubmit /> <SignOut /></div> : 
-                <div>
-                    <div><NavLink to='/login'>Login</NavLink></div> 
-                    <div><NavLink to='/signup'>Sign Up</NavLink></div>
-                </div> 
-            }
-        </div>
+        <>
+            <Navbar />
+            <div className='panel'>
+                <h1>Invoicing made easy!</h1>
+                { user.user ? <div><TestSubmit /> <SignOut /></div> : 
+                    <div>
+                        <div><NavLink to='/login'>Login</NavLink></div> 
+                        <div><NavLink to='/signup'>Sign Up</NavLink></div>
+                    </div> 
+                }
+            </div>
+        </>
     );
 };
 

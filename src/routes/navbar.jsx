@@ -11,6 +11,7 @@ export default function Navbar() {
             <ul>
                 <li><NavLink to='/login'>login</NavLink></li>
                 <li><NavLink to='/signup'>signup</NavLink></li>
+                {user.user ? <li>{user.user.email}</li> : <></>}
             </ul>
         </nav>
     );
