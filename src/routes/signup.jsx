@@ -1,8 +1,7 @@
 import React from 'react';
-import { Form, Navigate, redirect, NavLink, } from 'react-router-dom';
+import { Form, Navigate, redirect, NavLink, useOutletContext } from 'react-router-dom';
 import {  createUserWithEmailAndPassword } from 'firebase/auth';
 
-import userAuthState from '../firebase/userAuthState.jsx';
 import { auth } from '../firebase/firebaseConfig.jsx';
 import './signup.css'
 
@@ -17,13 +16,13 @@ export async function action({ request, params }) {
 
 export default function Signup() {
 
-    const { user, loading } = userAuthState();
+    const [user] = useOutletContext();
 
-    if (loading) { 
+    if (user.loading) { 
         return <div></div>; 
     };
 
-    if (user) { 
+    if (user.user) { 
         return <Navigate to='/' replace />;
     };
 

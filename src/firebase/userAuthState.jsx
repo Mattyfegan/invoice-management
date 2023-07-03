@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebaseConfig.jsx'
 
-const userAuthState = () => {
+const UserAuthState = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -15,7 +15,7 @@ const userAuthState = () => {
         return () => unsubscribe();
     }, []);
 
-    return { user, loading };
+    return <>{children({ user, loading })}</>;
 };
 
-export default userAuthState;
+export default UserAuthState;

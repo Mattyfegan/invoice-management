@@ -1,11 +1,10 @@
-import { Form, Navigate, redirect, NavLink, } from 'react-router-dom';
+import { Form, Navigate, redirect, NavLink, useOutletContext } from 'react-router-dom';
 
 import { 
     signInWithRedirect, getRedirectResult, GoogleAuthProvider,
     signInWithEmailAndPassword
 } from 'firebase/auth';
 
-import userAuthState from '../firebase/userAuthState.jsx';
 import { auth } from '../firebase/firebaseConfig.jsx';
 import './login.css'
 
@@ -21,14 +20,14 @@ export async function action({ request, params }) {
 };
 
 export default function Login() {
-    
-    const { user, loading } = userAuthState();
 
-    if (loading) { 
+    const [user] = useOutletContext();
+
+    if (user.loading) { 
         return <div></div>; 
     };
 
-    if (user) { 
+    if (user.user) { 
         return <Navigate to='/' replace />;
     };
 
