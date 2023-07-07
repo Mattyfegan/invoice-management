@@ -1,35 +1,62 @@
-nav {  
-    color: var(--text-color);
-    background-color: rgba(0, 0, 0, 0);
-
+.navContainer{
+    height: 10vh;
+    width: 100vw;
     position: fixed;
     top: 0;
-    left: 0;
-    width: 92vw;
-
-    display: flex;
-    justify-content: space-between;
-
-    margin: 1em 4vw;
-}
-nav ul {
-    display: flex;
-    justify-content: space-between;
-    gap: 2em;
-
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-nav ul li {
+    left:0;
     display: flex;
     align-items: center;
 }
-.navimg {
+
+nav{
+    color: var(--text-color);
+    width: 95vw;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 2.5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-img {
     color: rgba(0, 0, 0, 0) !important; 
     background-color: rgba(0, 0, 0, 0) !important;
 }
-.navimg img {
+
+.nav-img img {
     width: 3.5em;
     height: 3.5em;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 2em;
+}
+
+nav ul li a{
+    font-size: 18px;
+}
+
+nav ul li a:hover{
+    color: var(--primary-color);
+    background-color: rgba(0, 0, 0, 0)
+}
+
+.loginButton{
+    position: fixed;
+    right: 10%
+}
+
+.navContainer button a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.linkButton:hover{
+    background-color: var(--background-color)
 }

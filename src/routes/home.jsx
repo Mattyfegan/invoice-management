@@ -14,15 +14,23 @@ export default function Home() {
     };
 
     return(
-        <div className='panel'>
-            <h1>Invoicing made easy!</h1>
-            { user ? <div><TestSubmit /> <SignOut /></div> : 
-                <div>
-                    <div><NavLink to='/login'>Login</NavLink></div> 
-                    <div><NavLink to='/signup'>Sign Up</NavLink></div>
-                </div> 
-            }
-        </div>
+        <body id='landing-bg'>
+            <div id='firstSection'>
+                <div id='titleBox'>
+                    <h1 id='titleText'>Invoice Management, <span className='colorText'>Made Easy</span></h1>
+                </div>
+            </div>
+        </body>
+        
+        // <div className='panel'>
+        //     <h1>Invoicing made easy!</h1>
+        //     { user ? <div><TestSubmit /> <SignOut /></div> : 
+        //         <div>
+        //             <div><NavLink to='/login'>Login</NavLink></div> 
+        //             <div><NavLink to='/signup'>Sign Up</NavLink></div>
+        //         </div> 
+        //     }
+        // </div>
     );
 };
 

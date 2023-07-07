@@ -1,0 +1,30 @@
+#landing-bg{
+    background-image: url(../img/landingBackground.svg);
+    z-index: -99999;
+    background-attachment: fixed;
+}
+
+#firstSection{
+    margin-top:10vh;
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    flex-wrap: flex;
+}
+
+#titleBox{
+    height: 75%;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: flex;
+}
+
+#titleText{
+    text-align: center;
+    font-size: 75px;
+    letter-spacing: -5px;
+}

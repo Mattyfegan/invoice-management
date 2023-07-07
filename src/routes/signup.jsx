@@ -28,7 +28,7 @@ export default function Signup() {
     };
 
     return (
-        <div className='panel'>
+        <div className='panel login'>
             <h1>Sign Up</h1>
             <Form method='post'>
                 <input 
@@ -45,7 +45,7 @@ export default function Signup() {
                 />
                 <button type="submit">Sign Up</button>
             </Form>
-            <NavLink to='/login'>Login</NavLink>
+            <NavLink to='/login'>Already a member? Login</NavLink>
         </div>
     );
 };

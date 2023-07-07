@@ -8,6 +8,7 @@ import {
 import userAuthState from '../firebase/userAuthState.jsx';
 import { auth } from '../firebase/firebaseConfig.jsx';
 import './login.css'
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
 export async function action({ request, params }) {
     const formData = await request.formData();
@@ -33,7 +34,7 @@ export default function Login() {
     };
 
     return(
-        <div className='panel'>
+        <div className='panel login'>
             <h1>Login</h1>
             <Form method='post'>
                 <input 
@@ -41,17 +42,18 @@ export default function Login() {
                     aria-label="email address"
                     type="email"
                     name="email"
-                />
+                /><br />
                 <input 
                     placeholder="Password"
                     aria-label="password"
                     type="password"
                     name="password"
-                />
+                /><br />
                 <button type="submit">Login</button>
             </Form>
-            <SignInWithGoogle />
-            <NavLink to='/signup'>Sign Up</NavLink>
+            <br /><h1 id='or'><span> OR </span></h1><br />
+            <SignInWithGoogle /> <br />
+            <NavLink to='/signup'>Not a member? Sign Up</NavLink>
         </div>
     );
 };

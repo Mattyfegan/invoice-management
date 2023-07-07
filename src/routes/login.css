@@ -1,0 +1,27 @@
+
+/* #login form input{
+    width: 100%
+} */
+
+#login form button{
+    margin: 0.5em 1em 0.5em 0em;
+}
+
+#or{
+    width: 80%;
+    border-bottom: 2px solid var(--primary-color);
+    font-size: 20px;
+    line-height: 0.1em;
+    text-align: center;
+    margin: 1em 0 0 0;
+}
+
+#or span{
+    background: var(--secondary-color);
+    padding: 0 1em
+}
+
+#login a{
+    width: 50%;
+    text-align: center; 
+}

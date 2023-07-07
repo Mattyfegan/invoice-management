@@ -1,8 +1,8 @@
 :root {
-  --text-color: #0b2316;
-  --background-color: #dcf4e7;
-  --primary-color: #3dbd79;
-  --secondary-color: #ecf9f2;
+  --text-color: #ffffff;
+  --background-color: #453F3C;
+  --primary-color: #7FBEAB;
+  --secondary-color: #9389AE;
   --accent-color: #37a96c;
 
   font-family: "Inter", system-ui, "Avenir", Helvetica, Arial, sans-serif;
@@ -39,9 +39,10 @@ a {
   text-decoration: underline solid 2px;
   text-underline-offset: 0.3em;
 }
+
 a:hover {
   color: var(--background-color);
-  background-color: var(--text-color);
+
 }
 
 body {
@@ -49,6 +50,7 @@ body {
   display: flex;
   place-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -73,7 +75,7 @@ button {
   border: none;
   border-radius: 0.2em;
   padding: 0.4em 1.4em;
-  margin: 0.5em 1em 0.5em 0em;
+  margin: 0.5em 1em 0.5em 1em;
 
   transition: transform ease 0.2s, box-shadow ease 0.2s;
 }
@@ -100,4 +102,17 @@ input {
   border-radius: 1em;
   padding: 2em;
   background-color: var(--secondary-color);
+}
+
+.colorText{
+  color: var(--primary-color);
+}
+
+.login{
+  height: 45vh; 
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center
 }
