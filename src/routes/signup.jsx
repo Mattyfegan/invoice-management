@@ -1,8 +1,8 @@
-import React from 'react';
 import { Form, Navigate, redirect, NavLink, useOutletContext } from 'react-router-dom';
-import {  createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 import { auth } from '../firebase/firebaseConfig.jsx';
+
 import './signup.css'
 
 export async function action({ request, params }) {

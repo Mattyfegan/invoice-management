@@ -1,11 +1,11 @@
 import { Form, Navigate, redirect, NavLink, useOutletContext } from 'react-router-dom';
-
 import { 
     signInWithRedirect, getRedirectResult, GoogleAuthProvider,
     signInWithEmailAndPassword
 } from 'firebase/auth';
 
 import { auth } from '../firebase/firebaseConfig.jsx';
+
 import './login.css'
 
 export async function action({ request, params }) {

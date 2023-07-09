@@ -38,9 +38,14 @@ function SignOut() {
 
 function TestSubmit() {
     const fetcher = useFetcher();
+    const [user] = useOutletContext();
+
+    const handleSubmit = async (event) => {
+        await testSubmit(event, user.user.uid);
+    };
 
     return (
-        <fetcher.Form method="post" onSubmit={ testSubmit }>
+        <fetcher.Form method="post" onSubmit={ handleSubmit }>
             <input 
                 placeholder="Test Data"
                 aria-label="Test Data"

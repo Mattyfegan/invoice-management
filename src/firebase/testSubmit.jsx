@@ -1,12 +1,12 @@
 import { addDoc, collection } from 'firebase/firestore';
 import { firestore } from './firebaseConfig.jsx';
 
-const testSubmit = (event) => {
+const testSubmit = (event, uid) => {
     event.preventDefault();
 
     const data = event.target.testdata.value;
 
-    const ref = collection(firestore, 'test_data');
+    const ref = collection(firestore, `users/${uid}/settings`);
 
     try {
         addDoc(ref, {testData: data});
