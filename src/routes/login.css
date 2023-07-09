@@ -3,7 +3,7 @@
     width: 100%
 } */
 
-#login form button{
+.login form button{
     margin: 0.5em 1em 0.5em 0em;
 }
 

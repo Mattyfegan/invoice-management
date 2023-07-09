@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import './root.css';
 import '../firebase/firebaseConfig.jsx';
 
+import UserAuthState from '../firebase/userAuthState';
 import Home from './home.jsx';
 import Navbar from './navbar';
 import Login, { action as loginAction } from './login.jsx';
