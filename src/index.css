@@ -4,8 +4,6 @@
   --primary-color: #7FBEAB;
   --secondary-color: #9389AE;
   --accent-color: #37a96c;
-  /* 7FBEAB */
-  /* d17a3f */
 
   font-family: "Inter", system-ui, "Avenir", Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -55,6 +53,7 @@ body {
   flex-wrap: wrap;
   min-width: 320px;
   min-height: 100vh;
+  /* overflow: hidden; */
 }
 
 h1 {
@@ -110,11 +109,43 @@ input {
   color: var(--primary-color);
 }
 
+.logBody{
+  height: 40rem;
+  width: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
 .login{
-  height: 45vh; 
-  width: 20vw;
+  height: 27rem; 
+  width: 18rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: center
+  align-items: start;
+}
+
+.login form{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 15px
+}
+
+.login form h1{
+  padding: 0;
+}
+
+.backToHome{
+  width: 100%;
+  height: 100%;
+}
+
+.bruv{
+  width: 25%;
+  height: 20%;
 }

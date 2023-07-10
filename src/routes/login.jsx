@@ -1,4 +1,4 @@
-import { Form, Navigate, redirect, NavLink, } from 'react-router-dom';
+import { Form, Navigate, redirect, NavLink, useOutletContext} from 'react-router-dom';
 
 import { 
     signInWithRedirect, getRedirectResult, GoogleAuthProvider,
@@ -22,38 +22,41 @@ export async function action({ request, params }) {
 };
 
 export default function Login() {
-    
-    const { user, loading } = userAuthState();
+    const [user] = useOutletContext();
 
-    if (loading) { 
+    if (user.loading) { 
         return <div></div>; 
     };
 
-    if (user) { 
+    if (user.user) { 
+        console.log(user.user);
         return <Navigate to='/' replace />;
     };
 
     return(
-        <div className='panel login'>
-            <h1>Login</h1>
-            <Form method='post'>
-                <input 
-                    placeholder="Email"
-                    aria-label="email address"
-                    type="email"
-                    name="email"
-                /><br />
-                <input 
-                    placeholder="Password"
-                    aria-label="password"
-                    type="password"
-                    name="password"
-                /><br />
-                <button type="submit">Login</button>
-            </Form>
-            <br /><h1 id='or'><span> OR </span></h1><br />
-            <SignInWithGoogle /> <br />
-            <NavLink to='/signup'>Not a member? Sign Up</NavLink>
+        <div className='logBody'>
+            <NavLink className='bruv' to='/'><img className='backToHome' src='../../public/imsLogo.svg' alt='logo'/></NavLink>
+            <div className='panel login'>
+                <h1>Login</h1>
+                <Form method='post'>
+                    <input 
+                        placeholder="Email"
+                        aria-label="email address"
+                        type="email"
+                        name="email"
+                    /><br />
+                    <input 
+                        placeholder="Password"
+                        aria-label="password"
+                        type="password"
+                        name="password"
+                    /><br />
+                    <button type="submit">Login</button>
+                </Form>
+                <br /><h1 id='or'><span> OR </span></h1><br />
+                <SignInWithGoogle /> <br />
+                <NavLink to='/signup'>Not a member? Sign Up</NavLink>
+            </div>
         </div>
     );
 };

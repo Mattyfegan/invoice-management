@@ -1,6 +1,6 @@
 #landing-bg{
-    background-image: url(../img/landingBackground.svg);
-    z-index: -99999;
+    background-image: url(../../public/landingBackground.svg);
+    z-index: -69420;
     background-attachment: fixed;
 }
 
@@ -15,7 +15,7 @@
 }
 
 #titleBox{
-    height: 75%;
+    height: 65%;
     width: 100vw;
     display: flex;
     align-items: center;

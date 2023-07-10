@@ -15,7 +15,6 @@ nav{
     position: fixed;
     top: 0;
     left: 2.5%;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,19 +30,24 @@ nav{
     height: 3.5em;
 }
 
-nav ul li{
+nav ul li {
     list-style: none;
     display: inline-block;
-    padding: 2em;
 }
 
 nav ul li a{
     font-size: 18px;
+    text-decoration: none;
+    padding: 0.3em 1.5em 0.3em 1.5em;
+    display: block;
+    transition: transform ease 0.2s, box-shadow ease 0.2s;
 }
 
 nav ul li a:hover{
-    color: var(--primary-color);
-    background-color: rgba(0, 0, 0, 0)
+    color: var(--background-color);
+    transform: translate(0, -3px);
+    border-radius: 10rem;
+    background-color: var(--secondary-color);
 }
 
 .loginButton{

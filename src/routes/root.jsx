@@ -33,5 +33,9 @@ export const routes = [
 ];
 
 export default function Root() {
-    return(<><Navbar /><Outlet /></>);
+    return(
+        <UserAuthState>
+            {(user, loading) => <Outlet context={[user, loading]} />}
+        </UserAuthState>
+    );
 };

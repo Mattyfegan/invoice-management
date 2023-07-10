@@ -1,10 +1,15 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink,useOutletContext } from 'react-router-dom';
 
-import logo from "../img/imslogo.svg"
+import logo from "../../public/imsLogo.svg"
 
 import './navbar.css'
 
 export default function Navbar() {
+    const [user] = useOutletContext();
+    if (user.loading) { 
+        return <div></div>; 
+    };
+    console.log(user.user)
     return (
         <div className='navContainer'>
             <nav>
@@ -16,9 +21,14 @@ export default function Navbar() {
                     <li><NavLink to='/gst'>GST</NavLink></li>
                     <li><NavLink to='/help'>Help</NavLink></li>
                 </ul>
-                <NavLink to='/signup' className='linkButton'><button>Sign up</button></NavLink> 
+                { user.user ? <div><SignOut /></div> : <NavLink to='/login' className='linkButton'><button>Login</button></NavLink>}
             </nav>
-            <NavLink to='/login' className="loginButton linkButton"><button >Log in</button></NavLink>
         </div>
+    );
+};
+
+function SignOut() {
+    return auth.currentUser && (
+        <button onClick={ () => auth.signOut(() => navigate('/')) }>Sign Out</button>
     );
 };

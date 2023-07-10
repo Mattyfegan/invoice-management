@@ -1,6 +1,9 @@
 import React from 'react';
-import { Form, Navigate, redirect, NavLink, } from 'react-router-dom';
-import {  createUserWithEmailAndPassword } from 'firebase/auth';
+import { Form, Navigate, redirect, NavLink, useOutletContext} from 'react-router-dom';
+import { 
+    signInWithRedirect, getRedirectResult, GoogleAuthProvider,
+    signInWithEmailAndPassword
+} from 'firebase/auth';
 
 import userAuthState from '../firebase/userAuthState.jsx';
 import { auth } from '../firebase/firebaseConfig.jsx';
@@ -17,35 +20,70 @@ export async function action({ request, params }) {
 
 export default function Signup() {
 
-    const { user, loading } = userAuthState();
+    const [user] = useOutletContext();
 
-    if (loading) { 
+    if (user.loading) { 
         return <div></div>; 
     };
 
-    if (user) { 
+    if (user.user) { 
         return <Navigate to='/' replace />;
     };
 
     return (
-        <div className='panel login'>
-            <h1>Sign Up</h1>
-            <Form method='post'>
-                <input 
-                    placeholder="Email"
-                    aria-label="Email address"
-                    type="email"
-                    name="email"
-                />
-                <input 
-                    placeholder="Password"
-                    aria-label="password"
-                    type="password"
-                    name="password"
-                />
-                <button type="submit">Sign Up</button>
-            </Form>
-            <NavLink to='/login'>Already a member? Login</NavLink>
+        <div className='logBody'>
+            <NavLink className='bruv' to='/'><img className='backToHome' src='../../public/imsLogo.svg' alt='logo'/></NavLink>
+            <div className='panel login'>
+                <h1>Sign Up</h1>
+                <Form method='post'>
+                    <input className='halfSize'
+                        placeholder="First Name"
+                        aria-label="First Name"
+                        type="text"
+                        name="fname"
+                    /><br />
+                    <input className='halfSize'
+                        placeholder="Last Name"
+                        aria-label="Last Name"
+                        type="text"
+                        name="lname"
+                    /><br />
+                    <input className='other'
+                        placeholder="Email"
+                        aria-label="Email address"
+                        type="email"
+                        name="email"
+                    />
+                    <input className='other'
+                        placeholder="Password"
+                        aria-label="password"
+                        type="password"
+                        name="password"
+                    />
+                    <input className='other'
+                        placeholder="Company Name"
+                        aria-label="Company Name"
+                        type="text"
+                        name="cname"
+                    /><br />
+                    <button type="submit">Sign Up</button>
+                </Form>
+                <br /><h1 id='or'><span> OR </span></h1><br />
+                <SignInWithGoogle /> <br />
+                <NavLink to='/login'>Already a member? Login</NavLink>
+            </div>
         </div>
+    );
+};
+
+function SignInWithGoogle() {
+    const provider = new GoogleAuthProvider();
+
+    const signInWithGoogle = () => {
+        signInWithRedirect(auth, provider); // NEED TO CATCH REDIRECT FOR THIS TO WORK (ALSO NEED WORKAROUND FOR DISABLED THIRD PARTY COOKIES)
+    };
+
+    return (
+        <button onClick={ signInWithGoogle }>Sign up with Google</button>
     );
 };

@@ -1,36 +1,30 @@
-import { NavLink, useFetcher } from 'react-router-dom';
+import { NavLink, useFetcher, useOutletContext } from 'react-router-dom';
 
 import { auth } from '../firebase/firebaseConfig.jsx';
+import NavBar from './navbar.jsx'
 import testSubmit from '../firebase/testSubmit.jsx';
 import userAuthState from '../firebase/userAuthState.jsx';
 import './home.css';
 
 export default function Home() {
 
-    const { user, loading } = userAuthState();
+    const [user] = useOutletContext();
 
-    if (loading) { 
+    if (user.loading) { 
         return <div></div>; 
     };
 
     return(
-        <body id='landing-bg'>
-            <div id='firstSection'>
-                <div id='titleBox'>
-                    <h1 id='titleText'>Invoice Management, <span className='colorText'>Made Easy</span></h1>
+        <>
+            <NavBar />
+            <div id='landing-bg'>
+                <div id='firstSection'>
+                    <div id='titleBox'>
+                        <h1 id='titleText'>Invoice Management, <span className='colorText'>Made Easy</span></h1>
+                    </div>
                 </div>
             </div>
-        </body>
-        
-        // <div className='panel'>
-        //     <h1>Invoicing made easy!</h1>
-        //     { user ? <div><TestSubmit /> <SignOut /></div> : 
-        //         <div>
-        //             <div><NavLink to='/login'>Login</NavLink></div> 
-        //             <div><NavLink to='/signup'>Sign Up</NavLink></div>
-        //         </div> 
-        //     }
-        // </div>
+        </>
     );
 };
 
