@@ -44,17 +44,17 @@ export default function Login() {
                         aria-label="email address"
                         type="email"
                         name="email"
-                    /><br />
+                    />
                     <input 
                         placeholder="Password"
                         aria-label="password"
                         type="password"
                         name="password"
-                    /><br />
+                    />
                     <button type="submit">Login</button>
                 </Form>
-                <br /><h1 id='or'><span> OR </span></h1><br />
-                <SignInWithGoogle /> <br />
+                <h1 id='or'><span> OR </span></h1>
+                <SignInWithGoogle />
                 <NavLink to='/signup'>Not a member? Sign Up</NavLink>
             </div>
         </div>

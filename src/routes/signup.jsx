@@ -41,13 +41,13 @@ export default function Signup() {
                         aria-label="First Name"
                         type="text"
                         name="fname"
-                    /><br />
+                    />
                     <input className='halfSize'
                         placeholder="Last Name"
                         aria-label="Last Name"
                         type="text"
                         name="lname"
-                    /><br />
+                    />
                     <input className='other'
                         placeholder="Email"
                         aria-label="Email address"
@@ -65,11 +65,11 @@ export default function Signup() {
                         aria-label="Company Name"
                         type="text"
                         name="cname"
-                    /><br />
+                    />
                     <button type="submit">Sign Up</button>
                 </Form>
-                <br /><h1 id='or'><span> OR </span></h1><br />
-                <SignInWithGoogle /> <br />
+                <h1 id='or'><span> OR </span></h1>
+                <SignInWithGoogle /> 
                 <NavLink to='/login'>Already a member? Login</NavLink>
             </div>
         </div>

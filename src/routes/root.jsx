@@ -6,6 +6,7 @@ import '../firebase/firebaseConfig.jsx';
 import UserAuthState from '../firebase/userAuthState';
 import Home from './home.jsx';
 import Navbar from './navbar';
+import Invoices from './invoice/invoices'
 import Login, { action as loginAction } from './login.jsx';
 import Signup, { action as signupAction } from './signup.jsx';
 
@@ -28,6 +29,10 @@ export const routes = [
                 element: <Signup />,
                 action: signupAction,
             },
+            {
+                path: "invoices",
+                element: <Invoices />
+            }
         ]
     }
 ];

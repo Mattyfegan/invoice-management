@@ -3,7 +3,8 @@
   --background-color: #453F3C;
   --primary-color: #7FBEAB;
   --secondary-color: #9389AE;
-  --accent-color: #37a96c;
+  --accent-color: #37A96C;
+  --shadow-color: #3a3533;
 
   font-family: "Inter", system-ui, "Avenir", Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -103,6 +104,7 @@ input {
   border-radius: 1em;
   padding: 2em;
   background-color: var(--secondary-color);
+  box-shadow: 10px 15px var(--shadow-color);
 }
 
 .colorText{

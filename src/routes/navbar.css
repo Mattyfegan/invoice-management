@@ -33,21 +33,26 @@ nav{
 nav ul li {
     list-style: none;
     display: inline-block;
+    margin: 0 3px 0 3px
 }
 
 nav ul li a{
+    width: 5rem;
+    text-align:center;
     font-size: 18px;
     text-decoration: none;
     padding: 0.3em 1.5em 0.3em 1.5em;
     display: block;
-    transition: transform ease 0.2s, box-shadow ease 0.2s;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5)
 }
 
 nav ul li a:hover{
-    color: var(--background-color);
-    transform: translate(0, -3px);
-    border-radius: 10rem;
-    background-color: var(--secondary-color);
+    color: white;
+}
+
+nav ul li a.active{
+    color: white
 }
 
 .loginButton{
